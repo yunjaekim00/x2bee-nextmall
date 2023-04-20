@@ -1,0 +1,28 @@
+.infos {
+  color: $text-grey3-color;
+  font-size: 1.4rem;
+  h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  &__stars {
+    display: inline;
+    justify-content: end;
+    padding: 0.4rem 1rem 0 0;
+    // border: 1px solid red;
+    gap: 1rem;
+  }
+}
+
+.border {
+  border-top: 1px solid $border-grey-color;
+  margin: 1rem 0 2rem 0;
+}

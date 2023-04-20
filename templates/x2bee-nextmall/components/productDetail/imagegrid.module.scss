@@ -1,0 +1,44 @@
+.images {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  &__list {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 480px) {
+      flex-direction: row;
+      // justify-self: flex-start;
+      gap: 0.5rem;
+      padding: 0 0.5rem;
+    }
+
+    &__item {
+      padding: 0.1rem 0 0 0;
+      img {
+        object-fit: cover;
+        cursor: pointer;
+        translate: 0 0.25rem;
+        padding: 0 0.2rem 0 0.2rem;
+        width: 3.8rem;
+        height: 5.8rem;
+      }
+    }
+  }
+  &__large {
+    // large image style
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    img {
+      object-fit: cover;
+      width: 38rem;
+      height: 58rem;
+    }
+  }
+}
+.active {
+  outline: 2px solid $button-bg-color;
+  outline-offset: 0.1rem; // 이미지보다 큰 박스
+}

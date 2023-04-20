@@ -1,0 +1,224 @@
+.top {
+  position: sticky;
+  top: 0;
+  // margin-bottom: 3rem;
+  z-index: 9; // body는 0, header는 9, 팝업메뉴는 10 줄려고 함. -> 그냥
+  &__slim {
+    min-height: 10rem;
+  }
+  &__container {
+    // BEM 형식에서 top__container는 이렇게 표시
+    padding: 0.8rem;
+    background-color: $background-color;
+    border-bottom: 1px solid $border-grey-color;
+    display: flex;
+    justify-content: space-between;
+    &__slim {
+      z-index: 9;
+    }
+  }
+
+  // 두 줄로
+  &__leftslim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__leftthick {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  &__moveFromTop {
+    animation: moveInTop 0.3s ease-out;
+  }
+  &__moveFromLeft {
+    margin: 0 0 0 1rem;
+    animation: moveInLeft 0.3s ease-out;
+  }
+  &__rightslim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__rightthick {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  &__moveFromRight {
+    margin: 0 1rem 0 0;
+    animation: moveInRight 0.3s ease-out;
+  }
+
+  // menu는 GnB 스타일링
+  &__menu {
+    display: flex;
+    justify-content: right;
+
+    li {
+      padding: 0 1.2rem;
+      display: flex;
+      position: relative;
+      cursor: pointer;
+    }
+    span {
+      font-size: 1.8rem;
+      color: $text-grey3-color;
+      &:hover,
+      &:active {
+        color: #000;
+        font-weight: 700;
+      }
+    }
+    &__bottom {
+      // 메뉴 hover시 바탕 어두워지게 하는 부분
+      position: absolute;
+      z-index: 5;
+      top: 23rem;
+      left: -0.8rem; // top__container에서 준 것 뺌 + global에서 3rem padding 준 것
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.33);
+    }
+  }
+  // list는 상단 아이콘과 Logo 스타일링
+  &__list {
+    // top-left(logo)와 top-right(로그인 아이콘) 동시 class
+    display: flex;
+    &__right {
+      // top-right(로그인 아이콘) class만 따로
+      justify-content: right;
+    }
+    li {
+      padding: 0 1.2rem 0 1.2rem;
+      cursor: pointer;
+      display: flex;
+      position: relative;
+    }
+    img {
+      height: 3.6rem;
+      pointer-events: none; //드래그 안 되게
+    }
+    svg {
+      // react-icon이 svg element이다.
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $text-grey3-color;
+      &:hover,
+      &:active {
+        color: $text-grey9-color;
+      }
+    }
+    span {
+      font-size: 1.8rem;
+      color: $text-grey3-color;
+    }
+    .shoppingbag {
+      // 아래는 네모난 한섬 그림 -> 쇼핑카드 icon으로 대체함
+      // width: 2.4rem;
+      // height: 2.4rem;
+      // position: relative;
+      // background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='-0.75' y='0.75' width='22.5' height='22.5' transform='matrix(-1 0 0 1 22.5 0)' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+      position: relative;
+      top: 0.3rem;
+      span {
+        position: absolute;
+        font-weight: 600;
+        font-size: 1.2rem;
+        top: -1.1rem;
+        right: -1.1rem;
+        background: $background-grey3-color;
+        color: #fff;
+        border-radius: 50%;
+        border: 1px solid rgba(1, 1, 1, 0.33);
+        width: 2.2rem;
+        height: 2.2rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile {
+  position: sticky;
+  top: 0;
+  // margin-bottom: 3rem;
+  z-index: 9; // body는 0, header는 9, 팝업메뉴는 10 줄려고 함. -> 그냥
+  max-height: 6rem;
+  padding: 1rem;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-grey-color;
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  img {
+    height: 3rem;
+    pointer-events: none; //드래그 안 되게
+  }
+  svg {
+    // react-icon이 svg element이다.
+    width: 3rem;
+    height: 3rem;
+    color: $text-grey3-color;
+    // &:hover,
+    // &:active {
+    //   color: $text-grey9-color;
+    // }
+  }
+  &__icons {
+    // border: 1px solid red;
+    gap: 2rem 0;
+    padding: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: $background-color;
+  }
+}

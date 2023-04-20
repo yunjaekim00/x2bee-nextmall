@@ -1,0 +1,65 @@
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+
+.overlay {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 20;
+
+  &__search {
+    width: 50vw;
+    height: 100vh;
+    background: $background-color;
+    animation-name: moveInLeft;
+    animation-duration: 0.3s;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(50vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+}
+
+// @mixin keyframes($animation_name) {
+//   @-webkit-keyframes #{$animation_name} {
+//     @content;
+//   }
+//   @keyframes #{$animation_name} {
+//     @content;
+//   }
+// }
+
+// @mixin animation($name, $duration, $method) {
+//   -webkit-animation-name: #{$name};
+//   -webkit-animation-duration: #{$duration};
+//   -webkit-animation-timing-function: #{$method};
+
+//   animation-name: #{$name};
+//   animation-duration: #{$duration};
+//   animation-timing-function: #{$method};
+// }
+
+// @include keyframes(moveInLeft) {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-50vw);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }

@@ -1,0 +1,33 @@
+.product {
+  min-height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+  .path {
+    margin: 2rem 0 0 2rem;
+    font-size: 1.6rem;
+    color: $text-grey3-color;
+    @media (max-width: 480px) {
+      margin: 1.5rem 0 0 1rem;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: row;
+    &__info {
+      padding: 1rem;
+      max-width: 480px;
+      &__buttons {
+        text-align: center;
+      }
+    }
+    // 868보다 좁아지면 Info란 밑으로
+    @media screen and (max-width: 868px) {
+      flex-direction: column;
+    }
+  }
+}

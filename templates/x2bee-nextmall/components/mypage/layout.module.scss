@@ -1,0 +1,42 @@
+.mypage {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "menu content";
+  //임시
+  min-height: 50vh;
+}
+
+.menu {
+  grid-area: menu;
+  // border: solid 1px red;
+  padding: 1rem;
+  margin: 1rem;
+  ul {
+    border-top: 1px solid $border-grey-color;
+    font-size: 1.6rem;
+    color: $text-grey3-color;
+    font-weight: 400;
+    cursor: default;
+    padding: 1rem;
+    li {
+      padding: 0 0 0 1rem;
+      font-size: 1.4rem;
+      color: $text-grey9-color;
+      cursor: pointer;
+      a {
+        &:hover {
+          font-weight: 800;
+          color: $text-grey3-color;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  grid-area: content;
+  // border: solid 1px blue;
+
+  padding: 1rem;
+  margin: 1rem;
+}

@@ -1,0 +1,35 @@
+.menu {
+  &__top {
+    border-top: 1px solid #eee;
+    position: absolute;
+    background: $background-color;
+    z-index: 9;
+    width: 100vw;
+    top: 3.1rem;
+    left: -3.8rem; // top__container에서 준 것 0.8rem + global에서 3rem padding 준 것
+    display: flex;
+    &__col {
+      margin: 1rem 0 1rem 3rem;
+      min-width: 30rem;
+      font-size: 1.4rem;
+      color: $text-grey3-color;
+      font-weight: 400;
+      padding: 1rem;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      ul {
+        cursor: default;
+        li {
+          cursor: pointer;
+          a {
+            &:hover {
+              font-weight: 800;
+              color: $text-grey3-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

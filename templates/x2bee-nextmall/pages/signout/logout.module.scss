@@ -1,0 +1,26 @@
+.logout {
+  min-height: 40vh;
+  padding: 2rem;
+  &__header {
+    color: $text-grey3-color;
+    // text-shadow: 1px 1px 1px #cccccc;
+    font-size: 2.8rem;
+    align-items: center;
+    text-align: center;
+  }
+  &__text {
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    justify-content: center;
+  }
+  &__form {
+    text-align: center;
+    padding: 1rem;
+    input {
+      padding: 0.5rem;
+      margin: 1rem;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

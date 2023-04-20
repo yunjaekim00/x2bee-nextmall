@@ -1,0 +1,47 @@
+[
+  {
+    "largeCtg": "마이페이지",
+    "smallCtg": [
+      {
+        "menu": "마이페이지",
+        "pathname": "/mypage/",
+        "subpathname": "main"
+      },
+      {
+        "menu": "마이하트",
+        "pathname": "/mypage/",
+        "subpathname": "heart"
+      }
+    ]
+  },
+  {
+    "largeCtg": "나의 옷장",
+    "smallCtg": [
+      {
+        "menu": "옷장",
+        "pathname": "/mypage/",
+        "subpathname": "wardrobe"
+      },
+      {
+        "menu": "코디북",
+        "pathname": "/mypage/",
+        "subpathname": "coordibook"
+      }
+    ]
+  },
+  {
+    "largeCtg": "주문 조회",
+    "smallCtg": [
+      {
+        "menu": "주문내역",
+        "pathname": "/mypage/",
+        "subpathname": "myorder"
+      },
+      {
+        "menu": "선물함",
+        "pathname": "/mypage/",
+        "subpathname": "presentbox"
+      }
+    ]
+  }
+]

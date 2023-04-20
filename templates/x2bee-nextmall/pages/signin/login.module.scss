@@ -1,0 +1,47 @@
+.login {
+  min-height: 40vh;
+  padding: 2rem;
+  margin: auto;
+  &__header {
+    color: $text-grey3-color;
+    // text-shadow: 1px 1px 1px #cccccc;
+    font-size: 2.8rem;
+    align-items: center;
+    text-align: center;
+  }
+  &__form {
+    text-align: center;
+    padding: 1rem;
+    input {
+      padding: 0.5rem;
+      margin: 1rem;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__errorMessage {
+    height: 2em;
+    font-size: 1.6rem;
+    color: rgb(172, 44, 44);
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  &__text {
+    font-size: 2rem;
+    color: $text-white-color;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    transform: "translate(-50%, -50%)";
+  }
+}

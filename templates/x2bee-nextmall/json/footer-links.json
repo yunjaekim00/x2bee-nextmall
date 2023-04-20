@@ -1,0 +1,21 @@
+[
+  {
+    "heading": "Information",
+    "links": [
+      { "name": "서비스 이용약관", "link": "#" },
+      { "name": "개인정보처리방침", "link": "#" },
+      { "name": "통신사업자정보확인", "link": "#" },
+      { "name": "채무지급보증 가입확인", "link": "#" },
+      { "name": "매장안내", "link": "#" }
+    ]
+  },
+  {
+    "heading": "Customer service",
+    "links": [
+      { "name": "고객센터", "link": "#" },
+      { "name": "주문배송조회", "link": "#" },
+      { "name": "반품&환불 안내", "link": "#" },
+      { "name": "취소/환불", "link": "#" }
+    ]
+  }
+]

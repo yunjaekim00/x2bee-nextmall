@@ -1,0 +1,21 @@
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  &__container {
+    margin: 2rem;
+  }
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    color: $text-grey3-color;
+    strong {
+      font-size: 1.4rem;
+      display: block;
+    }
+    span {
+      font-size: 1.2rem;
+      display: block;
+    }
+  }
+}

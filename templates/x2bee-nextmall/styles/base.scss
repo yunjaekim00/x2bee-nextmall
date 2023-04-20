@@ -1,0 +1,125 @@
+// 모든 .scss파일에 자동 import되는 파일
+// background
+$background-color: #fff;
+$background-grey3-color: #333;
+// border
+$border-grey-color: #eee;
+// text color
+$text-grey3-color: #333;
+$text-grey7-color: #777;
+$text-grey9-color: #999;
+$text-white-color: #fff;
+// button color
+$button-bg-color: #000;
+$button-font-color: #fff;
+// swiper arrow color
+$swiper-arrow: #1e33bd;
+
+.btn_primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $button-bg-color;
+  color: $button-font-color;
+  font-weight: 400;
+  cursor: pointer;
+  width: 100%;
+  height: 6rem;
+  min-width: 7.5rem;
+  width: 20rem;
+  margin: 1rem;
+  padding: 0 1.8rem;
+  font-size: 1.6rem;
+  @media (max-width: 480px) {
+    max-width: 14rem;
+    max-height: 4rem;
+    margin: 0.4rem;
+    padding: 0 1rem;
+  }
+}
+
+.swiper {
+  max-width: 1200px;
+  width: 90%;
+  // height: 90%;
+  // 양쪽 화살표 .mainSwiper에서 hidden으로 하고, hover할 때 다시 나타나게 함.
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: grid;
+    }
+  }
+}
+.swiper-slide {
+  /* Center slide text vertically */
+  // 이건 그대로 퍼 옴
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  // border-top: 1px solid #e4eaef;
+  background-color: $background-color;
+}
+
+.mainSwiper {
+  .swiper {
+    border-radius: 1rem;
+  }
+  .swiper-wrapper {
+    margin: 0 3rem 3.5rem 2rem;
+  }
+  .swiper-slide {
+    display: flex;
+    text-align: center;
+    // justify-content: center;
+    // align-items: center;
+    // text-indent: -3rem;
+  }
+  .swiper-slide img {
+    display: block;
+    border-radius: 5px;
+  }
+
+  // ?여기서부터는 현재 페이지 나타내는 동그라미
+  .swiper-pagination-bullet {
+    width: 9px;
+  }
+  .swiper-pagination-bullet-active {
+    background: $swiper-arrow;
+  }
+
+  // ?여기서부터는 왼쪽 오른쪽 화살표
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-rtl {
+    color: $swiper-arrow;
+    z-index: 9;
+    width: 5rem;
+    height: 8rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2rem;
+    display: none;
+  }
+
+  .swiper-button-prev {
+    left: -0.8rem;
+    top: 35%;
+  }
+  .swiper-button-next {
+    right: -0.3rem;
+    top: 35%;
+  }
+}

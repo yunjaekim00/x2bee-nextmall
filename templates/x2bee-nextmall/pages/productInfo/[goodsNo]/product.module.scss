@@ -1,0 +1,15 @@
+.product {
+  &__container {
+    padding: 1rem;
+  }
+  .path {
+    margin: 0 0 0 2rem;
+    font-size: 1.6rem;
+    color: $text-grey3-color;
+  }
+  &__main {
+    position: relative;
+    display: grid;
+    margin: 1rem 0 0 0;
+  }
+}

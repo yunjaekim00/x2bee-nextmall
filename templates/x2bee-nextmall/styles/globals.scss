@@ -1,0 +1,59 @@
+// Reset용 CSS
+// 모든 코드는 김윤재 책임이 수동으로 입력
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; // body의 box-sizing을 inherit (yjkim)
+}
+
+html {
+  font-size: 62.5%; // browser 기본이 16px이라 10px로 맞추고 시작. 10/16 = 0.625 (yjkim)
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  line-height: 1.7; // browsers have different line-heights
+  -webkit-font-smoothing: antialiased;
+  color: $text-grey7-color;
+  padding: 2rem;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit; // 이 element들은 font타입을 상속받도록 함.
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; // 글자 삐져나가기 방지
+}
+img,
+video,
+canvas,
+svg {
+  max-width: 100%; // prevent overflow of images
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  // default button style has borders
+  border: none;
+  outline: none;
+}

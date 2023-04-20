@@ -1,0 +1,55 @@
+.search {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border: 1px solid $text-grey3-color;
+  width: 30vw;
+  height: 4rem;
+  top: 3rem;
+  left: 3rem;
+  border-radius: 5px;
+  input {
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 90%;
+    background: transparent;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+  }
+  &__icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+.close {
+  position: absolute;
+  top: 3.2rem;
+  right: 5rem;
+  svg {
+    width: 4rem;
+    height: 4rem;
+    color: $text-grey3-color;
+
+    // 버튼 누르는 효과
+    &:hover {
+      transform: translateY(-3px);
+      color: $text-grey7-color;
+    }
+    &:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+    &:active,
+    &:focus {
+      transform: translateY(-1px);
+      color: $text-grey7-color;
+    }
+    // 여기까지 버튼 누르는 효과
+  }
+}
